@@ -9,7 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 // 取消注释即可在 SpringBoot 项目启动时执行
-@Component
+//@Component
 public class SpringAiAiInvoke implements CommandLineRunner {
 
     @Resource
