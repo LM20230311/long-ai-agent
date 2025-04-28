@@ -14,7 +14,7 @@ public class HttpAiInvoke {
 
         // 设置请求头
         Map<String, String> headers = new HashMap<>();
-        headers.put("Authorization", "Bearer " + TestApiKey.API_KEY);
+        headers.put("Authorization", "Bearer " + ApiKeyUtil.getApplicationValue("api-key"));
         headers.put("Content-Type", "application/json");
 
         // 设置请求体

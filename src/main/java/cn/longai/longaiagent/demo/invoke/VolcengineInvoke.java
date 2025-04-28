@@ -1,5 +1,6 @@
 package cn.longai.longaiagent.demo.invoke;
 
+import cn.hutool.core.io.resource.ResourceUtil;
 import com.volcengine.ark.runtime.model.completion.chat.ChatCompletionContentPart;
 import com.volcengine.ark.runtime.model.completion.chat.ChatCompletionRequest;
 import com.volcengine.ark.runtime.model.completion.chat.ChatMessage;
@@ -8,8 +9,10 @@ import com.volcengine.ark.runtime.service.ArkService;
 import okhttp3.ConnectionPool;
 import okhttp3.Dispatcher;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 
@@ -17,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 // 初始化Ark客户端，从环境变量中读取您的API Key
 public class VolcengineInvoke {
     // 从环境变量中获取您的 API Key。此为默认方式，您可根据需要进行修改
-    static String apiKey = TestApiKey.API_KEY;
+    static String apiKey = ApiKeyUtil.getApplicationValue("api-key-volengine");
     // 此为默认路径，您可根据业务所在地域进行配置
     static String baseUrl = "https://ark.cn-beijing.volces.com/api/v3";
     static ConnectionPool connectionPool = new ConnectionPool(5, 1, TimeUnit.SECONDS);
@@ -34,7 +37,7 @@ public class VolcengineInvoke {
               )
         ).build());
         multiParts.add(ChatCompletionContentPart.builder().type("text").text(
-                "这是哪里？"
+                "你好，我是龙猫"
         ).build());
 
         final ChatMessage userMessage = ChatMessage.builder().role(ChatMessageRole.USER)

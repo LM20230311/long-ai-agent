@@ -9,13 +9,11 @@ import java.net.URL;
 public class LangChainAiInvoke {
 
     public static void main(String[] args) {
-        URL resource = ResourceUtil.getResource("spring.ai.dashscope.api-key");
-        System.out.println(resource);
-//        ChatLanguageModel qwenModel = QwenChatModel.builder()
-//                .apiKey(TestApiKey.API_KEY)
-//                .modelName("qwen-max")
-//                .build();
-//        String answer = qwenModel.chat("我是龙猫，正在学习AIAgent的java实战项目，给我一点建议！");
-//        System.out.println(answer);
+        ChatLanguageModel qwenModel = QwenChatModel.builder()
+                .apiKey(ApiKeyUtil.getApplicationValue("api-key"))
+                .modelName("qwen-max")
+                .build();
+        String answer = qwenModel.chat("我是龙猫，正在学习AIAgent的java实战项目，给我一点建议！");
+        System.out.println(answer);
     }
 }
