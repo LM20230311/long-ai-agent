@@ -1,6 +1,5 @@
 package cn.longai.longaiagent.demo.invoke;
 
-import cn.hutool.core.io.resource.ResourceUtil;
 import com.volcengine.ark.runtime.model.completion.chat.ChatCompletionContentPart;
 import com.volcengine.ark.runtime.model.completion.chat.ChatCompletionRequest;
 import com.volcengine.ark.runtime.model.completion.chat.ChatMessage;
@@ -9,10 +8,8 @@ import com.volcengine.ark.runtime.service.ArkService;
 import okhttp3.ConnectionPool;
 import okhttp3.Dispatcher;
 
-import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 
@@ -37,7 +34,7 @@ public class VolcengineInvoke {
               )
         ).build());
         multiParts.add(ChatCompletionContentPart.builder().type("text").text(
-                "你好，我是龙猫"
+                "你好，我是五项一"
         ).build());
 
         final ChatMessage userMessage = ChatMessage.builder().role(ChatMessageRole.USER)

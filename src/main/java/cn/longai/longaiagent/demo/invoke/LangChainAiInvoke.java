@@ -1,10 +1,7 @@
 package cn.longai.longaiagent.demo.invoke;
 
-import cn.hutool.core.io.resource.ResourceUtil;
 import dev.langchain4j.community.model.dashscope.QwenChatModel;
 import dev.langchain4j.model.chat.ChatLanguageModel;
-
-import java.net.URL;
 
 public class LangChainAiInvoke {
 
