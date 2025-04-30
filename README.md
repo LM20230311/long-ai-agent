@@ -62,10 +62,10 @@
 
 RAG 核心特性实战：
 
-![RAG 核心特性实战](docs/images/核心特性.png)
+![RAG 核心特性实战](./docs/images/核心特性.png)
 
 项目架构设计图：
 
-![AI 智能体架构图](docs/images/AI智能体架构图.png)
+![AI 智能体架构图](./docs/images/AI智能体架构图.png)
 
 
