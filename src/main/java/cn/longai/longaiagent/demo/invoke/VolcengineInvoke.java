@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 // 初始化Ark客户端，从环境变量中读取您的API Key
 public class VolcengineInvoke {
     // 从环境变量中获取您的 API Key。此为默认方式，您可根据需要进行修改
-    static String apiKey = TestApiKey.API_KEY;
+    static String apiKey = ApiKeyUtil.getApplicationValue("api-key-volengine");
     // 此为默认路径，您可根据业务所在地域进行配置
     static String baseUrl = "https://ark.cn-beijing.volces.com/api/v3";
     static ConnectionPool connectionPool = new ConnectionPool(5, 1, TimeUnit.SECONDS);
@@ -34,7 +34,7 @@ public class VolcengineInvoke {
               )
         ).build());
         multiParts.add(ChatCompletionContentPart.builder().type("text").text(
-                "这是哪里？"
+                "你好，我是五项一"
         ).build());
 
         final ChatMessage userMessage = ChatMessage.builder().role(ChatMessageRole.USER)
