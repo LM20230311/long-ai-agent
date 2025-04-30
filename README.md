@@ -20,7 +20,7 @@
 
 此外基于 ReAct 模式的 `自主规划智能体 LongManus` ，可以利用网页搜索、资源下载和 PDF 生成工具，帮用户制定完整的约会计划并生成文档：
 
-![](docs/images/自主规划debug.png)
+![](./docs/images/自主规划debug.png)
 
 
 ## 项目思考

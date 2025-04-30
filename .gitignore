@@ -1,5 +1,6 @@
 ### 私密本地配置 ###
 application-local.yml
+chat-memory
 
 HELP.md
 target/
