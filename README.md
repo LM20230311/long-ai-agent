@@ -20,7 +20,7 @@
 
 此外基于 ReAct 模式的 `自主规划智能体 LongManus` ，可以利用网页搜索、资源下载和 PDF 生成工具，帮用户制定完整的约会计划并生成文档：
 
-![](docs/images/自主规划debug.png)
+![](./docs/images/自主规划debug.png)
 
 
 ## 项目思考
@@ -62,10 +62,10 @@
 
 RAG 核心特性实战：
 
-![RAG 核心特性实战](docs/images/核心特性.png)
+![RAG 核心特性实战](./docs/images/核心特性.png)
 
 项目架构设计图：
 
-![AI 智能体架构图](docs/images/AI智能体架构图.png)
+![AI 智能体架构图](./docs/images/AI智能体架构图.png)
 
 
