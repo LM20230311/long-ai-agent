@@ -30,6 +30,8 @@ public class LoveApp {
     private VectorStore loveAppVectorStore;
     @Resource
     private Advisor loveAppRagCloudAdvisor;
+    @Resource
+    private VectorStore pgVectorVectorStore;
 
     private final ChatClient chatClient;
 
@@ -93,7 +95,8 @@ public class LoveApp {
                         .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY, 10))
                 // 应用知识库问答
 //                .advisors(new QuestionAnswerAdvisor(loveAppVectorStore))
-                .advisors(loveAppRagCloudAdvisor)
+//                .advisors(loveAppRagCloudAdvisor)
+                .advisors(new QuestionAnswerAdvisor(pgVectorVectorStore))
                 .call()
                 .chatResponse();
         String content = chatResponse.getResult().getOutput().getText();
